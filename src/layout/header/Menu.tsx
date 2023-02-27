@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState, Fragment } from "react";
+import { useAccordionButton } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 
 const Menu = () => {
@@ -10,6 +11,23 @@ const Menu = () => {
     </Fragment>
   );
 };
+
+function CustomToggle({ children, eventKey }: any) {
+  const decoratedOnClick = useAccordionButton(eventKey, () =>
+    console.log("totally custom!")
+  );
+
+  return (
+    <button
+      type="button"
+      className="navbar-toggle"
+      onClick={decoratedOnClick}
+      data-bs-target=".navbar-collapse"
+    >
+      {children}
+    </button>
+  );
+}
 
 const MobileMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -31,17 +49,11 @@ const MobileMenu = () => {
             </Link>
           </div>
           {/* Toggle Button */}
-          <Accordion.Item
-            as={"button"}
-            type="button"
-            className="navbar-toggle"
-            eventKey="collapse"
-            data-bs-target=".navbar-collapse"
-          >
+          <CustomToggle eventKey="collapse">
             <span className="icon-bar" />
             <span className="icon-bar" />
             <span className="icon-bar" />
-          </Accordion.Item>
+          </CustomToggle>
         </div>
         <Accordion.Collapse
           eventKey="collapse"
