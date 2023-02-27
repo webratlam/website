@@ -1,6 +1,6 @@
 import CountUp from "react-countup";
 import ReactVisibilitySensor from "react-visibility-sensor";
-const Counter = ({ end, decimals }) => {
+const Counter = ({ end, decimals }: any) => {
   return (
     <CountUp
       end={end ? end : 100}
