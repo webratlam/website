@@ -1,5 +1,5 @@
 import { Fragment, useCallback, useState } from "react";
-import { Accordion } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
 
 const defaultAccordionData = [
   {
@@ -62,7 +62,7 @@ const JeenaAccordion = ({ defaultActive, accordions, accordionsData }: any) => {
           accordions.includes(accordion.id) && (
             <div key={accordion.id} className="accordion-item">
               <h5 className="accordion-header">
-                <Accordion.Toggle
+                <Accordion.Item
                   as="button"
                   className={`accordion-button ${
                     accordion.id === active ? "" : "collapsed"
@@ -71,7 +71,7 @@ const JeenaAccordion = ({ defaultActive, accordions, accordionsData }: any) => {
                   onClick={() => toggleAccordion(accordion.id)}
                 >
                   {accordion.title}
-                </Accordion.Toggle>
+                </Accordion.Item>
               </h5>
               <Accordion.Collapse
                 eventKey={accordion.id}
@@ -135,11 +135,11 @@ const JeenaAccordion2 = ({ accordionsData }: any) => {
   );
 
   return (
-    <Accordion defaultActiveKey={active}>
+    <Accordion activeKey={active}>
       {accordionsData.map((accordion: any) => (
         <div key={accordion.id} className="accordion-item">
           <h5 className="accordion-header">
-            <Accordion.Toggle
+            <Accordion.Item
               as="button"
               className={`accordion-button ${
                 accordion.id === active ? "" : "collapsed"
@@ -148,7 +148,7 @@ const JeenaAccordion2 = ({ accordionsData }: any) => {
               onClick={() => toggleAccordion(accordion.id)}
             >
               {accordion.title}
-            </Accordion.Toggle>
+            </Accordion.Item>
           </h5>
           <Accordion.Collapse
             eventKey={accordion.id}
