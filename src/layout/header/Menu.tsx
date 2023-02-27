@@ -24,7 +24,7 @@ const MobileMenu = () => {
           <div className="mobile-logo">
             <Link href="/">
               <img
-                src="assets/images/logos/logo-one.png"
+                src="assets/images/logos/logoWebb.png"
                 alt="Logo"
                 title="Logo"
               />
@@ -49,10 +49,10 @@ const MobileMenu = () => {
         >
           <ul className="navigation clearfix">
             <li className="dropdown">
-              <a href="#" onClick={() => active("home")}>
+              <a href="/" onClick={() => active("home")}>
                 Home
               </a>
-              <ul style={activeSubMenu("home")}>
+              {/* <ul style={activeSubMenu("home")}>
                 <li>
                   <Link href="/">IT Company</Link>
                 </li>
@@ -68,13 +68,13 @@ const MobileMenu = () => {
               </ul>
               <div className="dropdown-btn" onClick={() => active("home")}>
                 <span className="fas fa-chevron-down" />
-              </div>
+              </div> */}
             </li>
             <li className="dropdown">
-              <a href="#" onClick={() => active("services")}>
+              <a href="services" onClick={() => active("services")}>
                 services
               </a>
-              <ul style={activeSubMenu("services")}>
+              {/* <ul style={activeSubMenu("services")}>
                 <li>
                   <Link href="services">Services One</Link>
                 </li>
@@ -87,13 +87,13 @@ const MobileMenu = () => {
               </ul>
               <div className="dropdown-btn" onClick={() => active("services")}>
                 <span className="fas fa-chevron-down" />
-              </div>
+              </div> */}
             </li>
             <li className="dropdown">
-              <a href="#" onClick={() => active("Project")}>
+              <a href="project-details" onClick={() => active("Project")}>
                 Project
               </a>
-              <ul style={activeSubMenu("Project")}>
+              {/* <ul style={activeSubMenu("Project")}>
                 <li>
                   <Link href="project-grid">Project Grid</Link>
                 </li>
@@ -106,7 +106,7 @@ const MobileMenu = () => {
               </ul>
               <div className="dropdown-btn" onClick={() => active("Project")}>
                 <span className="fas fa-chevron-down" />
-              </div>
+              </div> */}
             </li>
             {/* <li className="dropdown">
               <a href="#" onClick={() => active("shop")}>
@@ -131,10 +131,10 @@ const MobileMenu = () => {
               </div>
             </li> */}
             <li className="dropdown">
-              <a href="#" onClick={() => active("blog")}>
+              <a href="blog" onClick={() => active("blog")}>
                 blog
               </a>
-              <ul style={activeSubMenu("blog")}>
+              {/* <ul style={activeSubMenu("blog")}>
                 <li>
                   <Link href="blog">blog standard</Link>
                 </li>
@@ -144,9 +144,9 @@ const MobileMenu = () => {
               </ul>
               <div className="dropdown-btn" onClick={() => active("blog")}>
                 <span className="fas fa-chevron-down" />
-              </div>
+              </div> */}
             </li>
-            <li className="dropdown">
+            {/* <li className="dropdown">
               <a href="#" onClick={() => active("pages")}>
                 pages
               </a>
@@ -173,7 +173,7 @@ const MobileMenu = () => {
               <div className="dropdown-btn" onClick={() => active("pages")}>
                 <span className="fas fa-chevron-down" />
               </div>
-            </li>
+            </li> */}
           </ul>
         </Accordion.Collapse>
       </Accordion>
@@ -187,7 +187,7 @@ const DeskTopMenu = () => {
         <div className="mobile-logo">
           <Link href="/">
             <img
-              src="assets/images/logos/logo-one.png"
+              src="assets/images/logos/logoWebb.png"
               alt="Logo"
               title="Logo"
             />
